@@ -1,0 +1,295 @@
+body {
+    margin: 50px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0def4; 
+}
+
+.navbar {
+    background-color: #9297db;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px; 
+}
+
+.card-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.card-header h2 {
+    margin: 0;
+}
+
+.card-header small {
+    color: #666;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body img {
+    float: left;
+    margin-right: 20px; 
+    width: 200px;
+    height: auto;
+}
+
+.card-body p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+
+.read-more {
+    display: inline-block; /* Change display to inline-block */
+    padding: 10px;
+    width: auto; /* Remove width to allow content to dictate width */
+    text-align: center;
+    background-color: #cf91aa;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+/*posts*/
+.post-detail {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 100px;
+    margin-bottom: 20px;
+}
+
+.post-detail h2 {
+    margin: 0 0 10px 0;
+}
+
+.post-detail small {
+    color: #666;
+}
+
+.post-detail p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.post-detail p:last-child {
+    margin-bottom: 0;
+}
+/*form*/
+.add-post {
+    width: 400px; /* Adjust the width as needed */
+    margin: 0 auto; /* This centers the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc; /* Optional: Add border for visual clarity */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    background-color: #9297db; /* Optional: Add a background color */
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #cdb3d8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/*login/register forms*/
+.login-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #cdb3d8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #e0def4;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropdown-button {
+    background-color: #f1f1f1; /* Background color */
+    color: #333; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove border */
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* Background color */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+/* Show dropdown content when hovering over dropdown button */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: #333; /* Text color */
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    font-family: Arial, sans-serif; /* Font family */
+    font-size: 16px; /* Font size */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Background color */
+}
+/* Style for the table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style for table headers */
+.table th {
+    background-color: #e0def4;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style for alternating row colors */
+.table tbody tr:nth-child(even) {
+    background-color: #cdb3d8;
+}
+
+/* Style for table cells */
+.table td {
+    padding: 8px;
+}
+
+/* Style for delete button */
+.btn-delete {
+    background-color: #9297db;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Hover effect for delete button */
+.btn-delete:hover {
+    background-color: #cdb3d8;
+}

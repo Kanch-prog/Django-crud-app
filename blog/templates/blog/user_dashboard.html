@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Published Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in user_posts %}
+        <tr>
+            <td>{{ post.title }}</td>
+            <td>{{ post.published_at | date:"M d, Y" }}</td>
+            <td>
+                <!-- Delete Button -->
+                <form action="{% url 'delete_post' post.post_id %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-delete btn-sm">Delete</button>
+                </form>
+                <!-- End Delete Button -->
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
