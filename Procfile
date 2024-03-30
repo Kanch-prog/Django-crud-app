@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn blog.wsgi:application
+web: python manage.py migrate && gunicorn django_project.wsgi
