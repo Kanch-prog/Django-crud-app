@@ -1,1 +1,1 @@
-web: gunicorn.Django-crud-app.wsgi --log-file-
+web: gunicorn.blog.wsgi --log-file-
